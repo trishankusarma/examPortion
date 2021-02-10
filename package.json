@@ -1,0 +1,30 @@
+{
+  "name": "examportion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "devStart": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.14",
+    "multer": "^1.4.2",
+    "sharp": "^0.27.1",
+    "socket.io": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
